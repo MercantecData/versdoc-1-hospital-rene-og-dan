@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace AnimalHospital
 {
@@ -32,6 +32,9 @@ namespace AnimalHospital
             } 
             else if(k == '2')
             {
+                Console.WriteLine("What is the patients name?");
+                String input = Console.ReadLine():
+                hospital. DischargePatient()
                 Console.WriteLine("Not yet implemented!");
             } 
             else if(k == '3')
