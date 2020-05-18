@@ -33,13 +33,21 @@ namespace AnimalHospital
             else if(k == '2')
             {
                 Console.WriteLine("What is the patients name?");
-                String input = Console.ReadLine():
-                hospital. DischargePatient()
-                Console.WriteLine("Not yet implemented!");
+                String input = Console.ReadLine();
+                try
+                {
+                    hospital.DischargePatient(hospital.FindPatientByName(input));
+                    Console.WriteLine("Patient discharged");
+                }
+                catch
+                {
+                    Console.WriteLine(" \n Beware!! Patient does not exist!!");
+                }
+                
             } 
             else if(k == '3')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine("\n Not yet implemented!");
             }
             else if (k == '4')
             {
