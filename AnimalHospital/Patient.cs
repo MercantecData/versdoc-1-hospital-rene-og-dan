@@ -20,5 +20,8 @@ namespace AnimalHospital
         {
             hospital.AdmitPatient(this);
         }
+        public void AssignDoctor(Doctor doctor) {
+            this.doctor = doctor;
+        } 
     }
 }
