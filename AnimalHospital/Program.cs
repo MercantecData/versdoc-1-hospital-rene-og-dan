@@ -26,6 +26,7 @@ namespace AnimalHospital
             Console.WriteLine();
 
             var k = Console.ReadKey().KeyChar;
+            Console.WriteLine();
             if(k == '1')
             {
                 AdmitPatient();
