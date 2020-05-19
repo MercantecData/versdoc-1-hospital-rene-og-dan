@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace AnimalHospital
 {
@@ -44,7 +44,38 @@ namespace AnimalHospital
             }
             else if (k == '5')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine("What is the name of the patient");
+                String patientName = Console.ReadLine();
+                Console.WriteLine("What is the name of the doctor");
+                String doctorName = Console.ReadLine();
+
+                Doctor localdoc = null;
+                Patient localPatient = null;
+                foreach(Doctor doc in hospital.doctors)
+                {
+                    if (doc.name == doctorName) {
+                        localdoc = doc;
+                    }
+                }
+                foreach (Patient pat in hospital.patients)
+                {
+                    if (pat.name == patientName)
+                    {
+                        localPatient = pat;
+                    }
+                }
+
+                if(localPatient != null && localdoc != null)
+                {
+                    localPatient.AssignDoctor(localdoc);
+                    localdoc.assignedPatients.Add(localPatient);
+                    Console.WriteLine("Doctor and patient have been linked ");
+                } 
+                else
+                {
+                    Console.WriteLine("Patient or doctorname written wrong");
+                }
+              
             }
             else if (k == '0')
             {

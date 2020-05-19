@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -20,5 +20,8 @@ namespace AnimalHospital
         {
             hospital.AdmitPatient(this);
         }
+        public void AssignDoctor(Doctor doctor) {
+            this.doctor = doctor;
+        } 
     }
 }
