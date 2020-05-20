@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace AnimalHospital
 {
@@ -26,13 +26,25 @@ namespace AnimalHospital
             Console.WriteLine();
 
             var k = Console.ReadKey().KeyChar;
+            Console.WriteLine();
             if(k == '1')
             {
                 AdmitPatient();
             } 
             else if(k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine("What is the patients name?");
+                String input = Console.ReadLine();
+                try
+                {
+                    hospital.DischargePatient(hospital.FindPatientByName(input));
+                    Console.WriteLine("Patient discharged");
+                }
+                catch
+                {
+                    Console.WriteLine(" \n Beware!! Patient does not exist!!");
+                }
+                
             } 
             else if(k == '3')
             {
