@@ -40,7 +40,11 @@ namespace AnimalHospital
             }
             else if (k == '4')
             {
-                Console.WriteLine("Not yet implemented!");
+                Console.WriteLine("Here you can see all doctors");
+                foreach(Doctor d in hospital.doctors)
+                {
+                    Console.WriteLine(d.name);
+                }
             }
             else if (k == '5')
             {
