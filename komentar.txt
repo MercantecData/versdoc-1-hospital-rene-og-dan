@@ -1,0 +1,4 @@
+i starten mergede vi til master i stedet for development og det var selvfølglig 
+problematisk fordi at development er kode under udvikling og master er det
+færdige produkt. 
+ 
